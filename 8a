@@ -1,0 +1,10 @@
+def fibonacci():
+    a, b = 0, 1
+    for _ in range(10):  # Generate Fibonacci numbers using a generator function
+        yield a
+        a, b = b, a + b
+
+fibonacci_series = fibonacci()  # Create a generator object for Fibonacci series
+
+for number in fibonacci_series:  # Print the first 10 Fibonacci numbers
+    print(number, end=" ")
