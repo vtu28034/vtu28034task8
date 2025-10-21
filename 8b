@@ -1,0 +1,10 @@
+def squares():
+    for i in range(5):  # Generate squares of numbers 0 through 4
+        yield i ** 2
+
+# Create a generator object for squares of numbers 0 through 4
+squares_generator = squares()
+
+# Iterate over the generator object and print the squares
+for square in squares_generator:
+    print(square)
